@@ -450,7 +450,6 @@ User: Godfrey
             processData: false,
             contentType: false,
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
                     console.log(res);
                     friend_headPortrait = res.data.headPortrait;
@@ -511,7 +510,6 @@ User: Godfrey
                 processData: false,
                 contentType: false,
                 success: function(res) {
-                    layer.close(loading);
                     if (res.code == 1) {
                         $("#dataCard").hide();
                         getAddMsgList();

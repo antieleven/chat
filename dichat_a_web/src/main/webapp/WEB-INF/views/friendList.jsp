@@ -590,7 +590,6 @@
             processData: false,
             contentType: false,
             success: function(res) {
-                layer.close(loading);
                 $("#MsgList").html("");
                 var flag = 0;
                 if (res.code == 1) {
@@ -680,7 +679,6 @@
             processData: false,
             contentType: false,
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
                     $("#impressionList").html("");
                     $.each(res.data, function(index, obj) {
@@ -720,7 +718,6 @@
                     msg: msg
                 },
                 success: function(res) {
-                    layer.close(loading);
                     console
                     var flag = 0;
                     if (res.code == 1) {
