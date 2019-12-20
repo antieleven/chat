@@ -456,16 +456,8 @@
             data: {},
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-                if(type==0){
-                    loading = layer.load(2);
-                }
-
-            },
             success: function(res) {
                 if(type==0){
-                    layer.close(loading);
                 }
 
                 var flag = 0;
@@ -562,35 +554,18 @@
 
                 } else {
                     if(type==0){
-                        layer.close(loading);
                     }
-                    swal("获取信息列表失败请刷新页面", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        location.reload();
-                });
+                    alert("获取信息列表失败请刷新页面");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取信息列表失败请刷新页面", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    location.reload();
-            });
+                alert("获取信息列表失败请刷新页面");
             }
 
         })
     }
     //打开聊天界面
-    function openBox(friendUserid,needRef=0) {
+    function openBox(friendUserid,needRef=0){
 
         var formData = new FormData();
         formData.append("FriendUserid", friendUserid);
@@ -605,13 +580,7 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
                     console.log(res);
                     var html = '';
@@ -670,27 +639,11 @@
                     getFriendMsg(friendUserid,friend_headPortrait,friend_name,needRef);
 
                 } else {
-                    swal("获取聊天内容失败请重新点击", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        $("#chatBox").hide();
-                });
+                    alert("获取聊天内容失败请重新点击");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取聊天内容失败请重新点击", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    $("#chatBox").hide();
-            });
+                alert("获取聊天内容失败请重新点击");
             }
 
         })
@@ -708,32 +661,15 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
                     getMsgList();
                 } else {
-                    swal("设置失败请重试", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("设置失败请重试");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("设置失败请重试", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                });
+                alert("设置失败请重试");
             }
 
         })
@@ -752,32 +688,15 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
                     getMsgList();
                 } else {
-                    swal("设置失败请重试", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("设置失败请重试");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("设置失败请重试", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                });
+                alert("设置失败请重试");
             }
 
         })
@@ -802,22 +721,12 @@
 //                        SohoExamle.Image.add(obj.msg, 'outgoing-message',"${userDefine.headPortrait}","${userDefine.name}",send_time,obj.isSend)
                     $("input[name='msg']").val("");
                 } else {
-                    swal(res.msg, {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert(res.msg);
                 };
                 getMsgList();
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                swal("发送失败，连接异常", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                });
+                alert("发送失败，连接异常");
             }
 
         })
@@ -837,39 +746,17 @@
                 data: formData,
                 processData: false,
                 contentType: false,
-                beforeSend() {
-                    //发送前操作
-                    layer.close(layer.index);
-                    loading = layer.load(2);
-                },
                 success: function(res) {
-                    layer.close(loading);
                     if (res.code == 1) {
                         $("#chatBox").hide();
                         getMsgList();
-                        swal("删除成功!", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "success",
-                            timer: 1500,
-                        })
+                        alert("删除成功!");
                     } else {
-                        swal("删除记录失败请重试", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "warning",
-                            timer: 2000,
-                        });
+                        alert("删除记录失败请重试");
                     }
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    layer.close(loading);
-                    swal("删除记录失败请重试", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("删除记录失败请重试");
                 }
 
             })
@@ -892,39 +779,17 @@
                 data: formData,
                 processData: false,
                 contentType: false,
-                beforeSend() {
-                    //发送前操作
-                    layer.close(layer.index);
-                    loading = layer.load(2);
-                },
                 success: function(res) {
-                    layer.close(loading);
                     if (res.code == 1) {
                         $("#chatBox").hide();
                         getMsgList();
-                        swal("删除成功!", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "success",
-                            timer: 1500,
-                        })
+                        alert("删除成功!");
                     } else {
-                        swal("删除好友失败请重试", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "warning",
-                            timer: 2000,
-                        });
+                        alert("删除好友失败请重试");
                     }
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    layer.close(loading);
-                    swal("删除好友失败请重试", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("删除好友失败请重试");
                 }
 
             })
@@ -932,61 +797,6 @@
 
         });
 
-    }
-    //点赞
-    function setLove(impressionId,friendUseiid){
-
-        layer.confirm('您确定要点赞吗？', {
-            btn: ['确认','取消'] //按钮
-        }, function(){
-            var formData = new FormData();
-            formData.append("impressionId", impressionId);
-            $.ajax({
-                url: "${pageContext.request.contextPath}/center/setLove",
-                type: 'post',
-                data: formData,
-                processData: false,
-                contentType: false,
-                beforeSend() {
-                    //发送前操作
-                    layer.close(layer.index);
-                    loading = layer.load(2);
-                },
-                success: function(res) {
-                    layer.close(loading);
-                    if (res.code == 1) {
-                        swal("点赞成功!", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "success",
-                            timer: 1500,
-                        }).then(name => {
-                            openBox(friendUseiid);
-                    });
-
-                    } else {
-                        swal(res.msg, {
-                            button: false,
-                            dangerMode: true,
-                            icon: "warning",
-                            timer: 1500,
-                        });
-                    }
-                },
-                error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    layer.close(loading);
-                    swal("连接异常请重试", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 1500,
-                    });
-                }
-
-            })
-        }, function(){
-
-        });
     }
     //获取对方发来的信息
     function getUnreadMsg(friendUserid,friend_headPortrait,friend_name){
@@ -998,9 +808,6 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-            },
             success: function(res) {
                 console.log(res);
                 console.log("\n");
@@ -1028,12 +835,7 @@
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                swal("获取聊天内容失败请重新点击", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                })
+                alert("获取聊天内容失败请重新点击");
             }
 
         })
@@ -1052,12 +854,7 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
 
                     $("#chatContant").html("");
@@ -1099,27 +896,11 @@
                     }
 
                 } else {
-                    swal("获取聊天内容失败请重新点击", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        $("#chatBox").hide();
-                });
+                    alert("获取聊天内容失败请重新点击");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取聊天内容失败请重新点击", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    $("#chatBox").hide();
-            });
+                alert("获取聊天内容失败请重新点击");
             }
 
         })
@@ -1158,14 +939,7 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
-
                 if (res.code == 1) {
                     var text1 = "";
                     $("#down").html(text1);
@@ -1195,27 +969,11 @@
                     })
                     saveFile(text1,friendUserid);
                 } else {
-                    swal("获取聊天内容失败请重新点击", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        $("#chatBox").hide();
-                });
+                    alert("获取聊天内容失败请重新点击");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取聊天内容失败请重新点击", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    $("#chatBox").hide();
-            });
+                alert("获取聊天内容失败请重新点击");
             }
 
         })
@@ -1248,26 +1006,11 @@
 
                     })
                 } else {
-                    swal("获取好友印象失败，请重新获取", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        $("#chatBox").hide();
-                });
+                    alert("获取好友印象失败，请重新获取");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                swal("获取好友印象失败，请重新获取", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    $("#chatBox").hide();
-            });
+                alert("获取好友印象失败，请重新获取");
             }
 
         })
@@ -1285,14 +1028,7 @@
 
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                swal("连接错误", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    window.location.reload();
-            });
+                alert("连接错误");
             }
 
         })
