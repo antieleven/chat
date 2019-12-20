@@ -501,6 +501,7 @@ User: Godfrey
         layer.confirm('确认要同意申请嘛？', {
             btn: ['确认', '取消'] //按钮
         }, function() {
+            layer.close(layer.index);
             var formData = new FormData();
             formData.append("id", id);
             $.ajax({
@@ -531,14 +532,13 @@ User: Godfrey
     //拒绝好友申请
     function disagree(id) {
         //删除聊天记录
-        layer.prompt({
-            title: '拒绝理由',
-            formType: 2
-        }, function(msg, index) {
-            layer.close(index);
+        layer.confirm('确认要拒绝申请嘛？', {
+            btn: ['确认', '取消'] //按钮
+        },  function() {
+            layer.close(layer.index);
             var formData = new FormData();
             formData.append("id", id);
-            formData.append("disagreeMsg", msg);
+            formData.append("disagreeMsg", "null");
             $.ajax({
                 url: "${pageContext.request.contextPath}/center/disagreeAddMsg",
                 type: 'post',
