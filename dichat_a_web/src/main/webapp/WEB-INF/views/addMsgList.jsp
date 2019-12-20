@@ -61,8 +61,8 @@ User: Godfrey
                 <div class="alert alert-info">发送好友验证.</div>
                 <form id="addFriendAjax" method="post" action="${pageContext.request.contextPath}/center/addFriend">
                     <div class="form-group">
-                        <label for="emails" class="col-form-label">滴信号码</label>
-                        <input type="text" name="FriendUserid" class="form-control" id="emails" placeholder="请输入对方的滴信号码">
+                        <label for="emails" class="col-form-label">账号</label>
+                        <input type="text" name="FriendUserid" class="form-control" id="emails" placeholder="请输入对方的账号">
                     </div>
                     <div class="form-group">
                         <label for="message" class="col-form-label">请输入验证消息</label>
