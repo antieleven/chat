@@ -276,39 +276,17 @@
                 data:formData,
                 processData:false,
                 contentType:false,
-                beforeSend() {
-                    //发送前操作
-                    loading = layer.load(2);
-                },
                 success: function(res) {
-                    layer.close(loading);
-                    if (res.code == 1) {
-                        swal("注册成功，三秒后返回登录", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "success",
-                            timer: 1500,
-                        }).then(name => {
-                            window.location.href = "${pageContext.request.contextPath}/login";
-                    });
-
-                    } else {
-                        swal(res.msg, {
-                            button: false,
-                            dangerMode: true,
-                            icon: "warning",
-                            timer: 2000,
-                        });
+                    if(res.code == 1){
+                    alert("注册成功！点击确定返回登录！")
+                    window.location.href = "${pageContext.request.contextPath}/login";
+                    }else{
+                        alert(res.msg);
                     }
                 },
+
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    layer.close(loading);
-                    swal("连接错误", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("连接错误");
                 }
 
             })
