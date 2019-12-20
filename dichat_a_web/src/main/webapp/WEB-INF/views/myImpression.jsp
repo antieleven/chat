@@ -448,13 +448,7 @@
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
                 if (res.code == 1) {
                     $("#impressionList").html("");
                     $.each(res.data, function(index, obj) {
@@ -469,27 +463,11 @@
 
                     })
                 } else {
-                    swal("获取好友印象失败，请重新获取", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        $("#chatBox").hide();
-                });
+                    alert("获取好友印象失败，请重新获取");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取好友印象失败，请重新获取", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    $("#chatBox").hide();
-            });
+                alert("获取好友印象失败，请重新获取");
             }
 
         })
