@@ -1,0 +1,6 @@
+# Project exclude paths
+/dichat_a_web/target/
+/dichat_common/target/
+/dichat_dao/target/
+/dichat_pojo/target/
+/dichat_service/target/
