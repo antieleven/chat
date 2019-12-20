@@ -414,12 +414,7 @@ User: Godfrey
             data: {},
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-                loading = layer.load(2);
-            },
             success: function(res) {
-                layer.close(loading);
                 $("#MsgList").html("");
                 var flag = 0;
                 if (res.code == 1) {
@@ -428,28 +423,11 @@ User: Godfrey
                         List.add(obj.byUserid, obj.headPortrait, obj.name, obj.create_at, obj.id, obj.status, obj.msg);
                     })
                 } else {
-                    layer.close(loading);
-                    swal("获取信息列表失败请刷新页面", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        location.reload();
-                });
+                    alert("获取信息列表失败请刷新页面");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取信息列表失败请刷新页面", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    location.reload();
-            });
+                alert("获取信息列表失败请刷新页面");
             }
 
         })
@@ -471,10 +449,6 @@ User: Godfrey
             data: formData,
             processData: false,
             contentType: false,
-            beforeSend() {
-                //发送前操作
-                loading = layer.load(2);
-            },
             success: function(res) {
                 layer.close(loading);
                 if (res.code == 1) {
@@ -513,27 +487,11 @@ User: Godfrey
                     $("#dataCard").show();
 
                 } else {
-                    swal("获取资料失败请重新点击", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    })
-                        .then(name => {
-                        $("#dataCard").hide();
-                });
+                   alert("获取资料失败请重新点击");
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                layer.close(loading);
-                swal("获取资料失败请重新点击", {
-                    button: false,
-                    dangerMode: true,
-                    icon: "warning",
-                    timer: 2000,
-                }).then(name => {
-                    $("#dataCard").hide();
-            });
+                alert("获取资料失败请重新点击");
             }
 
         })
@@ -552,44 +510,22 @@ User: Godfrey
                 data: formData,
                 processData: false,
                 contentType: false,
-                beforeSend() {
-                    //发送前操作
-                    layer.close(layer.index);
-                    loading = layer.load(2);
-                },
                 success: function(res) {
                     layer.close(loading);
                     if (res.code == 1) {
                         $("#dataCard").hide();
                         getAddMsgList();
-                        swal("已添加为好友!", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "success",
-                            timer: 1500,
-                        })
+                        alert("已添加为好友!");
                     } else {
-                        swal(res.msg, {
-                            button: false,
-                            dangerMode: true,
-                            icon: "warning",
-                            timer: 2000,
-                        });
+                        alert(res.msg);
                     }
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    layer.close(loading);
-                    swal("连接异常，请刷新网站", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("连接异常，请刷新网站");
                 }
 
             })
         }, function() {
-
         });
 
     }
@@ -611,39 +547,17 @@ User: Godfrey
                 data: formData,
                 processData: false,
                 contentType: false,
-                beforeSend() {
-                    //发送前操作
-                    layer.close(layer.index);
-                    loading = layer.load(2);
-                },
                 success: function(res) {
-                    layer.close(loading);
                     if (res.code == 1) {
                         $("#dataCard").hide();
                         getAddMsgList();
-                        swal("拒绝成功!", {
-                            button: false,
-                            dangerMode: true,
-                            icon: "success",
-                            timer: 1500,
-                        })
+                        alert("拒绝成功！");
                     } else {
-                        swal(res.msg, {
-                            button: false,
-                            dangerMode: true,
-                            icon: "warning",
-                            timer: 2000,
-                        });
+                        alert(res.msg);
                     }
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
-                    layer.close(loading);
-                    swal("连接异常，请刷新网站", {
-                        button: false,
-                        dangerMode: true,
-                        icon: "warning",
-                        timer: 2000,
-                    });
+                    alert("连接异常，请刷新网站");
                 }
 
             })
