@@ -21,13 +21,6 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/11/30
- * Time: 4:14
- * To change this template use File | Settings | File Templates.
- */
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 public class chatMsgServiceImpl implements chatMsgService {

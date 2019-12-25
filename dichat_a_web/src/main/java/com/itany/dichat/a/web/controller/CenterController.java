@@ -89,6 +89,7 @@ public class CenterController {
 
         return "friendList";
     }
+
     @RequestMapping("/myImpression")
     public String myImpression(HttpSession session, HttpServletResponse response) throws IOException {
 

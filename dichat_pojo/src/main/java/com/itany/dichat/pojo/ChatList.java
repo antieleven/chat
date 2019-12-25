@@ -24,10 +24,8 @@ public class ChatList implements Serializable {
     //时间
     private long create_at;
 
-
     //是否置顶
     private Integer is_top;
-
 
     //未读数量
     private int notRead;

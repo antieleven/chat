@@ -26,13 +26,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/11/30
- * Time: 2:43
- * To change this template use File | Settings | File Templates.
- */
 @Controller
 @RequestMapping("/user")
 public class UserController {

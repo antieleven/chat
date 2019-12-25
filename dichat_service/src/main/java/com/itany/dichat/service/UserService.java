@@ -1,20 +1,10 @@
-package com.itany.dichat.service;/**
- * @author:GodFrey
- * @date:2019/12/1/001.
- */
+package com.itany.dichat.service;
 
 import com.itany.dichat.common.exception.UserExistException;
 import com.itany.dichat.dto.UserDefineDto;
 import com.itany.dichat.pojo.User;
 import org.apache.commons.fileupload.FileUploadException;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/1/001
- * Time: 19:18
- * File Name: 
- */
 public interface UserService {
     /**
      * 用户名登录

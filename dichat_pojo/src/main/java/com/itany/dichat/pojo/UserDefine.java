@@ -23,6 +23,7 @@ public class UserDefine implements Serializable {
     private String instructions;
     private String headPortrait;
     private int isFristLogin;
+
     public long getBirthday() {
         return birthday;
     }
