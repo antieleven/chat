@@ -1,17 +1,7 @@
-package com.itany.dichat.dto;/**
- * @author:GodFrey
- * @date:2019/12/3/003.
- */
+package com.itany.dichat.dto;
 
 import java.io.InputStream;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/3/003
- * Time: 11:41
- * File Name: 
- */
 public class ChatMsgDto {
     private Integer sendUserid;
     private Integer toUserid;

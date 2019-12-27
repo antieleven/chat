@@ -7,13 +7,6 @@ import org.apache.commons.fileupload.FileUploadException;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/11/30
- * Time: 4:12
- * To change this template use File | Settings | File Templates.
- */
 public interface chatMsgService {
 
 

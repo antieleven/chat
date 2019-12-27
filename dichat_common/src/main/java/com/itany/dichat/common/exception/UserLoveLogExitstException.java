@@ -1,15 +1,5 @@
-package com.itany.dichat.common.exception;/**
- * @author:GodFrey
- * @date:2019/12/4/004.
- */
+package com.itany.dichat.common.exception;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4/004
- * Time: 17:08
- * File Name: 
- */
 public class UserLoveLogExitstException extends Exception {
     public UserLoveLogExitstException() {
         super();

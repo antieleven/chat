@@ -1,17 +1,7 @@
-package com.itany.dichat.common.util;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.common.util;
 
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 12:47
- * File Name: 
- */
 public class RequestUtils {
 
     public static String getIpAddress(HttpServletRequest request) {

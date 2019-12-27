@@ -1,20 +1,10 @@
-package com.itany.dichat.service;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.service;
 
 import com.itany.dichat.pojo.UserFriend;
 import com.itany.dichat.pojo.UserFriendList;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 15:59
- * File Name: 
- */
 public interface UserFriendService {
     /**
      * 获取所有好友

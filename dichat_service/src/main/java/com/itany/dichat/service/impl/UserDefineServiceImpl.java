@@ -1,7 +1,4 @@
-package com.itany.dichat.service.impl;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.service.impl;
 
 import com.itany.dichat.dao.UserDefineDao;
 import com.itany.dichat.pojo.UserDefine;
@@ -13,13 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 15:49
- * File Name:
- */
+
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 public class UserDefineServiceImpl implements UserDefineService {

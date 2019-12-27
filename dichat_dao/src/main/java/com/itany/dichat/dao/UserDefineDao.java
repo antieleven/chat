@@ -5,13 +5,7 @@ package com.itany.dichat.dao;/**
 
 import com.itany.dichat.pojo.UserDefine;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 7:20
- * File Name: 
- */
+
 public interface UserDefineDao {
     void add(UserDefine userDefine);
 

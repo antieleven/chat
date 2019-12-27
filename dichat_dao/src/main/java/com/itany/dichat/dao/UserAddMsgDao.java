@@ -9,13 +9,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4/004
- * Time: 19:41
- * File Name:
- */
+
 public interface UserAddMsgDao {
     public int addFriendByFriendUserid(@Param("byUserid") int userid, @Param("toUserid") int friendUserid, @Param("msg") String msg, @Param("create_at") long time);
 

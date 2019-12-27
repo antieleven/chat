@@ -1,7 +1,4 @@
-package com.itany.dichat.service.impl;/**
- * @author:GodFrey
- * @date:2019/12/1/001.
- */
+package com.itany.dichat.service.impl;
 
 import com.itany.dichat.common.exception.UserExistException;
 import com.itany.dichat.common.util.StringUtils;
@@ -24,13 +21,6 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/1/001
- * Time: 19:18
- * File Name:
- */
 @Service
 @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class )
 public class UserServiceImpl implements UserService {

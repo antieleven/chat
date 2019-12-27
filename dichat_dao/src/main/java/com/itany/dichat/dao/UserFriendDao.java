@@ -9,13 +9,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 16:04
- * File Name:
- */
+
 public interface UserFriendDao {
 
     List<UserFriend> selectByUserid(int userid);

@@ -1,15 +1,6 @@
-package com.itany.dichat.common.exception;/**
- * @author:GodFrey
- * @date:2019/12/3/003.
- */
+package com.itany.dichat.common.exception;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/3/003
- * Time: 11:22
- * File Name: 
- */
+
 public class chatMsgExitstException extends Exception {
     public chatMsgExitstException() {
         super();

@@ -1,7 +1,4 @@
-package com.itany.dichat.service;/**
- * @author:GodFrey
- * @date:2019/12/4/004.
- */
+package com.itany.dichat.service;
 
 import com.itany.dichat.common.exception.UserAddMsgExitstException;
 import com.itany.dichat.pojo.AddMsgList;
@@ -9,13 +6,6 @@ import com.itany.dichat.pojo.UserAddMsg;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4/004
- * Time: 19:38
- * File Name: 
- */
 public interface UserAddMsgService {
     /**
      * 由好友id添加好友

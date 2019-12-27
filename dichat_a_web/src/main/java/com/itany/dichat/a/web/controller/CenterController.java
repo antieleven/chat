@@ -1,7 +1,4 @@
-package com.itany.dichat.a.web.controller;/**
- * @author:GodFrey
- * @date:2019/12/1/001.
- */
+package com.itany.dichat.a.web.controller;
 
 import com.itany.dichat.a.web.vo.ChatMsgVo;
 import com.itany.dichat.common.exception.UserAddMsgExitstException;
@@ -26,13 +23,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/1/001
- * Time: 20:57
- * File Name:
- */
 @Controller
 @RequestMapping("/center")
 public class CenterController {

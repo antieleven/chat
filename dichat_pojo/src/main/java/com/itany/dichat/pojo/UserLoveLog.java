@@ -2,13 +2,6 @@ package com.itany.dichat.pojo;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4
- * Time: 14:53
- * To change this template use File | Settings | File Templates.
- */
 public class UserLoveLog implements Serializable {
     private Integer id;
     private Integer impressionid;

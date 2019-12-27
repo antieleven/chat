@@ -1,17 +1,8 @@
-package com.itany.dichat.pojo;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.pojo;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 16:22
- * File Name:
- */
+
 public class ChatList implements Serializable {
     //好友账号
     private Integer friendUserid;

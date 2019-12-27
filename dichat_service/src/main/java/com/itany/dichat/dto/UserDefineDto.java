@@ -1,17 +1,7 @@
-package com.itany.dichat.dto;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.dto;
 
 import java.io.InputStream;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 8:43
- * File Name: 
- */
 public class UserDefineDto {
     private String username;
     private String password;

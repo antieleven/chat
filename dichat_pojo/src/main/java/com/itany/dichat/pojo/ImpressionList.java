@@ -2,13 +2,7 @@ package com.itany.dichat.pojo;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4
- * Time: 14:55
- * To change this template use File | Settings | File Templates.
- */
+
 public class ImpressionList implements Serializable {
     private Integer id;
     private Integer LoveNum;

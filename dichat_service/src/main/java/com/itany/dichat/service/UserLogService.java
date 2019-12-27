@@ -1,15 +1,5 @@
-package com.itany.dichat.service;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.service;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 12:41
- * File Name: 
- */
 public interface UserLogService {
 
     /**

@@ -1,19 +1,10 @@
-package com.itany.dichat.a.web.vo;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.a.web.vo;
 
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import java.util.Date;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 7:48
- * File Name: 
- */
+
 public class UserDefineVo {
     private String username;
     private String password;

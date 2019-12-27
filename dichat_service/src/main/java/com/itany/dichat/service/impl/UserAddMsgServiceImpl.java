@@ -1,7 +1,4 @@
-package com.itany.dichat.service.impl;/**
- * @author:GodFrey
- * @date:2019/12/4/004.
- */
+package com.itany.dichat.service.impl;
 
 import com.itany.dichat.common.exception.UserAddMsgExitstException;
 import com.itany.dichat.dao.UserAddMsgDao;
@@ -20,13 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4/004
- * Time: 19:38
- * File Name:
- */
+
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 public class UserAddMsgServiceImpl implements UserAddMsgService {

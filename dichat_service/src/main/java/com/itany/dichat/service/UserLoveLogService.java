@@ -5,13 +5,6 @@ import com.itany.dichat.pojo.UserLoveLog;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4
- * Time: 15:10
- * To change this template use File | Settings | File Templates.
- */
 public interface UserLoveLogService {
     /**
      * 获取对应印象的点赞人

@@ -1,17 +1,8 @@
-package com.itany.dichat.pojo;/**
- * @author:GodFrey
- * @date:2019/12/4/004.
- */
+package com.itany.dichat.pojo;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4/004
- * Time: 19:35
- * File Name: 
- */
+
 public class UserAddMsg implements Serializable {
     private Integer id;
     private Integer byUserid;

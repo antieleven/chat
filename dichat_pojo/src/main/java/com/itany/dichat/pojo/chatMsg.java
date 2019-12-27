@@ -2,13 +2,7 @@ package com.itany.dichat.pojo;
 
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/11/30
- * Time: 3:02
- * To change this template use File | Settings | File Templates.
- */
+
 public class chatMsg implements Serializable {
     private Integer id;
 

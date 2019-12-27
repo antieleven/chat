@@ -1,17 +1,7 @@
-package com.itany.dichat.a.web.vo;/**
- * @author:GodFrey
- * @date:2019/12/3/003.
- */
+package com.itany.dichat.a.web.vo;
 
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/3/003
- * Time: 11:38
- * File Name: 
- */
 public class ChatMsgVo {
     private Integer sendUserid;
     private Integer toUserid;

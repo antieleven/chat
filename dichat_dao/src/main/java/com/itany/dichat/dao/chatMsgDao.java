@@ -5,13 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/11/30
- * Time: 3:50
- * To change this template use File | Settings | File Templates.
- */
+
 public interface chatMsgDao {
 
     public List<chatMsg> selectAllMsg(int userid);

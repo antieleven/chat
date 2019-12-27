@@ -12,13 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/4
- * Time: 15:10
- * To change this template use File | Settings | File Templates.
- */
+
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 public class UserLoveLogServiceImpl implements UserLoveLogService {

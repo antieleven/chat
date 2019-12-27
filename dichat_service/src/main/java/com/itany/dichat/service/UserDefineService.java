@@ -1,17 +1,7 @@
-package com.itany.dichat.service;/**
- * @author:GodFrey
- * @date:2019/12/2/002.
- */
+package com.itany.dichat.service;
 
 import com.itany.dichat.pojo.UserDefine;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/2/002
- * Time: 15:49
- * File Name: 
- */
 public interface UserDefineService {
     /**
      * 获取某个用户信息

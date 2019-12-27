@@ -1,16 +1,8 @@
-package com.itany.dichat.common.util;/**
- * @author:GodFrey
- * @date:2019/12/1/001.
- */
+package com.itany.dichat.common.util;
 
 import com.itany.dichat.common.constant.ResposeStatusConstant;
 
 /**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/1/001
- * Time: 19:59
- * File Name:
  * 返回json数据类
  */
 public class ResponseResult {

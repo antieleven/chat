@@ -6,13 +6,7 @@ package com.itany.dichat.dao;/**
 import com.itany.dichat.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Godfrey
- * Date: 2019/12/1/001
- * Time: 19:19
- * File Name:
- */
+
 public interface UserDao {
     public User userLoginByUsername(String username);
 
